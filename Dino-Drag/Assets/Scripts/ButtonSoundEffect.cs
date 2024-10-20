@@ -16,6 +16,20 @@ public class ButtonSoundEffect : MonoBehaviour
 
     void PlaySound()
     {
-        audioSource.Play(); // Play the sound
+        Debug.Log("Button clicked!"); // Log button click
+        if (audioSource != null)
+        {
+            if (audioSource.isPlaying) // Check if the audio is already playing
+            {
+                audioSource.Stop(); // Stop it if it is
+            }
+            audioSource.Play(); // Play the sound
+            Debug.Log("Playing sound!"); // Log sound playing
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource is not assigned!");
+        }
     }
+
 }
