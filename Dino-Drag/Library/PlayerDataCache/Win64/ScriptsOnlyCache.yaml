@@ -1,5 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - ButtonSoundEffect
+    - CanvasManager
+    - Discrtionmanger
+    - ManuManger
+    - RadioButtonManager
+    - SettingMenu
+    - ShowCanvasAfterDelay
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
@@ -46,9 +54,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   serializedClasses:
     UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
     UnityEngine.UI:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
@@ -57,7 +68,35 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
-  methodsToPreserve: []
+    - UnityEngine.UI.Toggle/ToggleEvent
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: ManuManger
+    methodName: StartgaME
+  - assembly: Assembly-CSharp
+    fullTypeName: CanvasManager
+    methodName: showsecondcanvas
+  - assembly: Assembly-CSharp
+    fullTypeName: Discrtionmanger
+    methodName: showsecond1
+  - assembly: Assembly-CSharp
+    fullTypeName: Discrtionmanger
+    methodName: showfirtcanvas
+  - assembly: Assembly-CSharp
+    fullTypeName: ManuManger
+    methodName: Exit
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingMenu
+    methodName: showsettingmenu
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingMenu
+    methodName: showfrontpage
+  - assembly: Assembly-CSharp
+    fullTypeName: ManuManger
+    methodName: Exit
+  - assembly: Assembly-CSharp
+    fullTypeName: CanvasManager
+    methodName: firstcanvasshow
   sceneClasses:
     Assets/Scenes/Home.unity:
     - Class: 1
@@ -74,22 +113,42 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16690}
+      Script: {instanceID: 16694}
     - Class: 114
-      Script: {instanceID: 17964}
+      Script: {instanceID: 17970}
     - Class: 114
-      Script: {instanceID: 18226}
+      Script: {instanceID: 18232}
     - Class: 114
-      Script: {instanceID: 18576}
+      Script: {instanceID: 18582}
+    - Class: 114
+      Script: {instanceID: 20920}
     - Class: 114
       Script: {instanceID: 21416}
     - Class: 114
-      Script: {instanceID: 21786}
+      Script: {instanceID: 21792}
     - Class: 114
-      Script: {instanceID: 22406}
+      Script: {instanceID: 22002}
+    - Class: 114
+      Script: {instanceID: 22416}
+    - Class: 114
+      Script: {instanceID: 24304}
+    - Class: 114
+      Script: {instanceID: 24530}
+    - Class: 114
+      Script: {instanceID: 27834}
+    - Class: 114
+      Script: {instanceID: 31272}
+    - Class: 114
+      Script: {instanceID: 43656}
+    - Class: 114
+      Script: {instanceID: 48506}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -97,8 +156,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -483,6 +540,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 9628fc668e2f81e836723d1f2132c30f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: gameManger
+  - hash:
+      serializedVersion: 2
       Hash: b747f5d40674055dd70e18552f1b0447
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -763,6 +826,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: e0d931befb79eb32929f6ecc1da3c181
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CanvasManager
   - hash:
       serializedVersion: 2
       Hash: 9637dcdf3068a91dfe653e61bb82f13d
@@ -1047,6 +1116,18 @@ ScriptsOnlyBuild:
     className: SpriteLibrarySourceAsset
   - hash:
       serializedVersion: 2
+      Hash: 59cce64588de0ba1dd3e3940381e8cf6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ButtonSoundEffect
+  - hash:
+      serializedVersion: 2
+      Hash: d238acebcc4fda42c4b01f228100fa3c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ManuManger
+  - hash:
+      serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1093,7 +1174,31 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 08d348659459bc0166097eda6b1a887b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Discrtionmanger
+  - hash:
+      serializedVersion: 2
+      Hash: 8eab8b01090cdbca6217d6762bd29b26
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ShowCanvasAfterDelay
+  - hash:
+      serializedVersion: 2
+      Hash: 1535c9e862f05d437c867b2915592f20
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SettingMenu
+  - hash:
+      serializedVersion: 2
+      Hash: d8e74d67afc1a0e234f655e71c8c4f71
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RadioButtonManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/Home.unity
-  playerPath: D:/Git Hub/Game Dev & Projects/Dino-Drag-Game/Dino-Drag/Dino Drag 3.0/Dino-Drag.exe
+  playerPath: D:/Git Hub/Game Dev & Projects/Dino-Drag-Game/Dino-Drag/Dino-Drag 2.0/Dino-Drag.exe
