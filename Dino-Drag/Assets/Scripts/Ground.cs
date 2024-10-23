@@ -1,20 +1,19 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEditor;
-//using UnityEditor.Build.Content;
-//using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using JetBrains.Annotations;
+using UnityEditor;
+using UnityEngine;
 
-//public class Ground : MonoBehaviour
-//{
-//    private MeshRenderer MeshRenderer;
-//    private void Awake()
-//    {
-//        MeshRenderer = GetComponent<MeshRenderer>();    
-//    }
-//    private void Update()
-//    {
-//        //float speed = gameManger.instance.gamespeed/transform.lossyScale.x;
-//        //MeshRenderer.material.mainTextureOffset = Vector2.right * speed * Time.deltaTime;
-
-//    }
-//}
+public class Ground : MonoBehaviour
+{
+    private MeshRenderer MeshRenderer;
+    public void Awake()
+    {
+        MeshRenderer = GetComponent<MeshRenderer>();
+    }
+    public void Update()
+    {
+        float Speed = gameManger.instance.gamespeed /transform.localScale.x;
+        MeshRenderer.material.mainTextureOffset += Vector2.right * Speed * Time.deltaTime;
+    }
+}

@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class gameManger : MonoBehaviour
 {
-   public static gameManger instance 
-    { 
-        get; 
-        private set; 
-    }
-    public float initialgamespeed = 5f;
+   public static gameManger instance { get; private set; }
+    public float initialgamespeed = 2f;
     public float Gamespeedincrece = 0.1f;
 
     public float gamespeed { get; private set; }
     private void Awake()
     {
-        if (instance == null)
+        if (instance != null)
         {
            DestroyImmediate(gameObject);
         }
@@ -26,7 +22,7 @@ public class gameManger : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if (instance != null) {
+        if (instance == null) {
             instance = null;
         }
     }
@@ -40,7 +36,7 @@ public class gameManger : MonoBehaviour
     }
     private void upadte()
     {
-        gamespeed = gamespeed + Gamespeedincrece * Time.deltaTime;
+        gamespeed +=  Gamespeedincrece * Time.deltaTime;
     }
 
 }
