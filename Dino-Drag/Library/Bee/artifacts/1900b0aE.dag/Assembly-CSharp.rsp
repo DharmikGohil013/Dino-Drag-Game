@@ -382,6 +382,7 @@
 "Assets/Scripts/Discrtionmanger.cs"
 "Assets/Scripts/gameManger.cs"
 "Assets/Scripts/Ground.cs"
+"Assets/Scripts/LevelManging.cs"
 "Assets/Scripts/ManuManger.cs"
 "Assets/Scripts/Plyer.cs"
 "Assets/Scripts/RadioButtonManager.cs"
